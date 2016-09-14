@@ -24,14 +24,14 @@ def input_students
   # while the name is not empty, repeat this code
   while !name.empty? do
     name.downcase!
-    if name.include?('h')
+    if name.length <= 12
     # add the student hash to the array
     students << {name: name, cohort: :november}
     puts "Now we have #{students.count} students"
     # get another name from the user
     name = gets.chomp
     else
-    puts "Enter a name that starts with h"
+    puts "Enter a name shorter than 12 characters"
     name = gets.chomp
     end
   end
