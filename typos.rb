@@ -23,8 +23,11 @@ def print_header
 end
 
 def print(students)
+  if students.count >= 1
   students.each do |student|
     puts "#{student[:name]} (#{student[:cohort]} cohort)"
+  end
+else puts "No students this cohort"
   end
 end
 
